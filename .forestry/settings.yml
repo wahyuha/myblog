@@ -4,13 +4,11 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: document
-  path: docs
-  label: Docs
+- type: directory
+  path: ''
+  label: Demo
+  create: all
   match: "**/*"
-  read_only: true
-- type: heading
-  label: Content
 - type: directory
   path: content/posts
   label: Blog Posts
@@ -19,6 +17,12 @@ sections:
   new_doc_ext: md
   templates:
   - blog-post
+- type: document
+  path: docs
+  label: Docs
+  read_only: true
+- type: heading
+  label: Content
 - type: document
   path: content/data/authors.yaml
   label: Author List
